@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.spencerstudios.debugapp.Activities.LauncherActivity"
+    tools:showIn="@layout/activity_launcher">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:layout_marginBottom="1dp"
+
+        android:text="@string/tv_select_exception" />
+
+    <Button
+        android:id="@+id/btn_index_out_of_bounds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="@string/btn_index_out_of_bounds"
+        android:onClick="buttonClick" />
+
+    <Button
+        android:id="@+id/btn_null_pointer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="@string/btn_null_pointer"
+        android:onClick="buttonClick" />
+
+    <Button
+        android:id="@+id/btn_arithmetic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="@string/btn_illegal_argument"
+        android:onClick="buttonClick" />
+
+</LinearLayout>

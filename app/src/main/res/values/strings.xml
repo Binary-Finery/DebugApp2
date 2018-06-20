@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Exceptional</string>
+    <string name="action_settings">Github</string>
+
+    <string name="tv_select_exception"><u>select an exception</u></string>
+
+    <!--button text-->
+    <string name="btn_index_out_of_bounds">ArrayIndexOutOfBoundsException</string>
+    <string name="btn_null_pointer">NullPointerException</string>
+    <string name="btn_illegal_argument">ArithmeticException</string>
+
+</resources>
