@@ -1,17 +1,20 @@
 package com.spencerstudios.debugapp.Activities;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
-import com.spencerstudios.debugapp.Utilities.ExceptionFactory;
 import com.spencerstudios.debugapp.R;
+import com.spencerstudios.debugapp.Utilities.ExceptionFactory;
 
 public class LauncherActivity extends AppCompatActivity {
 
@@ -45,6 +48,7 @@ public class LauncherActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
+            launchGitHubRepoUrl();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -65,6 +69,15 @@ public class LauncherActivity extends AppCompatActivity {
             case R.id.btn_arithmetic:
                 ExceptionFactory.arithmetic(context);
                 break;
+        }
+    }
+
+    private void launchGitHubRepoUrl() {
+        try {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Binary-Finery/DebugApp2"));
+            startActivity(browserIntent);
+        } catch (Exception e) {
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 }
